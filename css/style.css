@@ -1,0 +1,43 @@
+
+:root {
+    --color-primary: #13507c;
+    --color-secondary: #189fa5;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: var(--color-secondary);
+    color: #ffffff;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f9fafb;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-secondary); 
+}
+
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(19, 80, 124, 0.15); 
+}

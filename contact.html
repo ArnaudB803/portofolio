@@ -1,0 +1,170 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Arnaud Boydens</title>
+
+
+   <link rel="stylesheet" href="css/tailwind.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#13507c',
+                        secondary: '#189fa5',
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4 flex-wrap">
+            <div class="text-2xl font-bold text-primary text-center md:text-left tracking-wide">
+                <a href="assets/images/logo-removebg-preview.png"></a>
+            </div>
+            <nav>
+                <ul class="flex flex-wrap justify-center gap-6 text-sm sm:text-base font-medium">
+                    <li><a href="index.html" class="text-gray-500 hover:text-secondary transition">Home</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-secondary transition">Portfolio</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-secondary transition">Project</a></li>
+                    <li><a href="contact.html" class="text-secondary border-b-2 border-secondary pb-1">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="flex-grow max-w-7xl mx-auto w-full px-4 py-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+        <a href="#inhoud" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2
+focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-blue-800">
+            Ga naar de inhoud
+        </a>
+        <main id="inhoud" class="mx-auto max-w-3xl px-4 py-8">
+            <h1 class="mb-2 text-3xl font-bold tracking-tight">Contact</h1>
+            <p class="mb-6 text-gray-700">Stel je vraag over een stage of een project. Velden
+                met een <span class="font-semibold text-red-700">*</span> zijn verplicht.</p>
+            <form action="#" method="get" class="grid gap-4 md:grid-cols-2">
+                <div>
+                    <label for="naam" class="block font-medium">naam <span class="text-red-700"
+                            aria-hidden="true">*</span></label>
+                    <input type="text" id="naam" name="naam" autocomplete="name" required class="mt-1 w-full rounded-lg border border-gray-400 bg-white px-3
+py-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">
+                </div>
+                <div>
+                    <label for="mail" class="block font-medium">e-mail <span class="text-red700"
+                            aria-hidden="true">*</span></label>
+                    Labo 6 — oplossingen pagina 13 van 18
+                    <input type="email" id="mail" name="mail" autocomplete="email" required aria-describedby="mail-hulp"
+                        class="peer mt-1 w-full rounded-lg border border-gray-400 bg-white
+px-3 py-2 user-invalid:border-red-700 focus-visible:outline-2 focus-visible:outline-offset-2
+focus-visible:outline-blue-700">
+                    <p id="mail-hulp" class="mt-1 text-sm text-gray-600">Vul een e-mailadres in
+                        zoals naam@voorbeeld.be.</p>
+                    <p class="mt-1 hidden text-sm font-semibold text-red-700 peer-userinvalid:block">Dit e-mailadres
+                        klopt
+                        niet. Vul het in zoals naam@voorbeeld.be.</p>
+                </div>
+                <div>
+                    <label for="gsm" class="block font-medium">gsm-nummer</label>
+                    <input type="tel" id="gsm" name="gsm" autocomplete="tel" pattern="04[0-9]{8}" title="Tien cijfers, beginnend met 04, zonder
+spaties" aria-describedby="gsm-hulp" class="peer mt-1 w-full rounded-lg border border-gray-400 bg-white
+px-3 py-2 user-invalid:border-red-700 focus-visible:outline-2 focus-visible:outline-offset-2
+focus-visible:outline-blue-700">
+                    <p id="gsm-hulp" class="mt-1 text-sm text-gray-600">Niet verplicht. Tien
+                        cijfers zonder spaties, bijvoorbeeld 0412345678.</p>
+                    <p class="mt-1 hidden text-sm font-semibold text-red-700 peer-userinvalid:block">Dit nummer klopt
+                        niet.
+                        Schrijf het zonder spaties: 0412345678.</p>
+                </div>
+                <div>
+                    <label for="onderwerp" class="block font-medium">onderwerp</label>
+                    <select id="onderwerp" name="onderwerp" class="mt-1 w-full rounded-lg border border-gray-400 bg-white px-3
+py-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">
+                        <option value="">Maak een keuze</option>
+                        <option value="stage">Stage</option>
+                        <option value="project">Project</option>
+                        <option value="vraag">Een vraag</option>
+                    </select>
+                </div>
+                <fieldset class="rounded-lg border border-gray-300 p-4 md:col-span-2">
+                    <legend class="px-2 font-semibold">Hoe wil je antwoord krijgen?</legend>
+                    <div class="mt-1 flex items-center gap-2">
+                        <input type="radio" id="via-mail" name="antwoord" value="mail" checked
+                            class="size-5 accent-blue-700 focus-visible:outline-2 focusvisible:outline-offset-2 focus-visible:outline-blue-700">
+                        <label for="via-mail">per e-mail</label>
+                    </div>
+                    <div class="mt-2 flex items-center gap-2">
+                        <input type="radio" id="via-tel" name="antwoord" value="telefoon"
+                            class="size-5 accent-blue-700 focus-visible:outline-2 focusvisible:outline-offset-2 focus-visible:outline-blue-700">
+                        <label for="via-tel">per telefoon</label>
+                    </div>
+                </fieldset>
+                <div class="md:col-span-2">
+                    
+                    <label for="bericht" class="block font-medium">je bericht <span class="textred-700"
+                            aria-hidden="true">*</span></label>
+                    <textarea id="bericht" name="bericht" rows="5" required minlength="10"
+                        aria-describedby="bericht-hulp" class="peer mt-1 w-full rounded-lg border border-gray-400 bg-white
+px-3 py-2 user-invalid:border-red-700 focus-visible:outline-2 focus-visible:outline-offset-2
+focus-visible:outline-blue-700"></textarea>
+                    <p id="bericht-hulp" class="mt-1 text-sm text-gray-600">Schrijf minstens
+                        tien tekens.</p>
+                    <p class="mt-1 hidden text-sm font-semibold text-red-700 peer-userinvalid:block">Je bericht is te
+                        kort.
+                        Schrijf minstens tien tekens.</p>
+                </div>
+                <div class="flex items-center gap-2 md:col-span-2">
+                    <input type="checkbox" id="toestemming" name="toestemming" value="ja" required
+                        class="size-5 accent-blue-700 focus-visible:outline-2 focusvisible:outline-offset-2 focus-visible:outline-blue-700">
+                    <label for="toestemming">ik ga akkoord dat Lotte mijn bericht leest <span class="text-red-700"
+                            aria-hidden="true">*</span></label>
+                </div>
+                <div class="md:col-span-2">
+                    <button type="submit" class="rounded-lg bg-blue-700 px-5 py-2 font-semibold text-white
+hover:bg-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focusvisible:outline-blue-700">
+                        Verstuur
+                    </button>
+                    <p class="mt-3 text-sm text-gray-600">Ik gebruik je gegevens enkel om je te
+                        antwoorden.</p>
+                </div>
+            </form>
+        </main>
+
+
+        <aside class="lg:col-span-1 space-y-8">
+
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                <h2 class="font-bold text-2xl mb-6 flex items-center text-gray-900">
+                    <span class="text-secondary mr-3 text-lg font-mono">01.</span> Contact Info
+                </h2>
+
+                <ul class="space-y-6">
+                    <li class="flex items-start gap-4">
+                        <div class="bg-blue-50 text-secondary p-3 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-gray-800">E-mail</p>
+                            <a href="mailto:arnaudboydens803@gmail.com"
+                                class="text-sm text-gray-600 hover:text-secondary transition">arnaudboydens803@gmail.com</a>
+                        </div>
+                    </li>
+
+                    <li class="flex items-start gap-4">
+                        <div class="bg-blue-50 text-secondary p-3 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13
